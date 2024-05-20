@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+    <form>
+        Pick a topic:
+        <input type="radio" ng-model="myVar" value="houses">Houses
+        <input type="radio" ng-model="myVar" value="cranes">Cranes
+        <input type="radio" ng-model="myVar" value="cars">Cars
+      </form>
+
+      <div ng-switch="myVar">
+        <div ng-switch-when="houses">
+            <h1>Houses</h1>
+            <p>Welcome to my house.</p>
+        </div>
+
+        <div ng-switch-when="cars">
+            <h1>Cars</h1>
+            <p>Engine is most important thing.</p>
+        </div>
+
+        <div ng-switch-when="cranes">
+            <h1>Cranes</h1>
+            <p>By a new crane.</p>
+        </div>
+    </div>
+</body>
+</html>
